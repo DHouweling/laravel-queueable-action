@@ -2,6 +2,7 @@
 
 namespace Spatie\QueueableAction\Tests\TestClasses;
 
+use Exception;
 use Spatie\QueueableAction\QueueableAction;
 
 class BackoffPropertyAction
@@ -13,6 +14,6 @@ class BackoffPropertyAction
 
     public function execute()
     {
-        throw new \Exception("Failure with backoff property set to 5");
+        throw new Exception("Failure with backoff property set to 5");
     }
 }
