@@ -4,14 +4,11 @@ namespace Spatie\QueueableAction\Tests;
 
 use Exception;
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Queue;
 use Illuminate\Support\Facades\Schema;
 use Spatie\QueueableAction\ActionJob;
 use Spatie\QueueableAction\Exceptions\InvalidConfiguration;
-use Spatie\QueueableAction\QueueableAction;
-use Spatie\QueueableAction\Testing\QueueableActionFake;
 use Spatie\QueueableAction\Tests\TestClasses\ActionWithFailedMethod;
 use Spatie\QueueableAction\Tests\TestClasses\BackoffAction;
 use Spatie\QueueableAction\Tests\TestClasses\BackoffPropertyAction;
