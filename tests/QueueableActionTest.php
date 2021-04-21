@@ -274,7 +274,7 @@ class QueueableActionTest extends TestCase
     }
 
     /** @test */
-    public function an_action_with_backoff_property_will_be_delayed_and_retried_after_failure(): void
+    public function an_action_can_have_a_backoff_property(): void
     {
         Queue::fake();
 
@@ -288,7 +288,7 @@ class QueueableActionTest extends TestCase
     }
 
     /** @test */
-    public function an_action_with_backoff_function_will_be_delayed_and_retried_after_failure(): void
+    public function an_action_can_have_a_backoff_function(): void
     {
         Queue::fake();
 
