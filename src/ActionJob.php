@@ -43,8 +43,9 @@ class ActionJob implements ShouldQueue
             $this->tags = $action->tags();
             $this->middleware = $action->middleware();
 
-            $this->backoff = method_exists($action, 'backoff')
-                ? $action->backoff() : ($action->backoff ?? null);
+            if (method_exists($action, 'backoff')) {
+                $this->backoff = $action->backoff();
+            }
 
             if (method_exists($action, 'failed')) {
                 $this->onFailCallback = [$action, 'failed'];

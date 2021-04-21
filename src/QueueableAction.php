@@ -78,6 +78,9 @@ trait QueueableAction
         return 'execute';
     }
 
+    /**
+     * @return array|int
+     */
     public function backoff()
     {
         return $this->backoff ?? [];
